@@ -1,15 +1,17 @@
-
 import turtle
 
+# Initialize the turtle
 t = turtle.Turtle()
 t.pensize(4)
 t.shape("turtle")
 
+# Function to move the turtle to a specific position without drawing
 def go(x, y):
     t.penup()
     t.goto(x, y)
     t.pendown()
 
+# Draw the main face
 go(86.17, 168.35)
 t.seth(223.85)
 t.circle(92.62, 28.1)
@@ -30,6 +32,7 @@ t.circle(90.86, 166.53)
 t.seth(328.76)
 t.circle(75.33, 96.22)
 
+# Draw the first eye
 go(90.27, 62.39)
 t.begin_fill()
 t.seth(318.45)
@@ -44,6 +47,7 @@ t.seth(276.12)
 t.circle(48.85, 42.33)
 t.end_fill()
 
+# Draw the second eye
 go(-70.61, 123.61)
 t.begin_fill()
 t.seth(41.27)
@@ -56,6 +60,7 @@ t.seth(328.15)
 t.circle(33.22, 73.12)
 t.end_fill()
 
+# Function to draw eyes
 def ojos(x, y):
     go(x, y)
     t.begin_fill()
@@ -68,10 +73,12 @@ def ojos(x, y):
     t.seth(310.49)
     t.circle(8.23, 84.9)
     t.end_fill()
-    
+
+# Draw both eyes
 ojos(18.25, 164.85)
 ojos(-24.40, 166.22)
 
+# Draw the mouth
 go(30.71, 211.68)
 t.begin_fill()
 t.seth(124.25)
@@ -88,6 +95,7 @@ t.seth(351.11)
 t.circle(3.47, 133.14)
 t.end_fill()
 
+# Draw the second part of the mouth
 go(-26.16, 208.37)
 t.begin_fill()
 t.seth(19.01)
@@ -104,77 +112,9 @@ t.seth(340.98)
 t.circle(8.78, 38.02)
 t.end_fill()
 
+# Function to draw small circles
 def circulos(x, y, diametro):
     go(x, y)
     t.begin_fill()
     t.seth(90)
-    t.circle(diametro/2)
-    t.end_fill()
-
-t.pensize(1)
-t.pencolor("White")
-t.fillcolor("White")
-circulos(25.89, 181.84, 2.57)
-circulos(25.15, 187.62, 5.52)
-circulos(-19.85, 181.84, 2.57)
-circulos(-20.74, 187.62, 5.52)
-
-t.pensize(4)
-t.pencolor("Black")
-t.fillcolor("Red")
-go(0, 0)
-t.begin_fill()
-t.seth(117.4)
-t.circle(83.63, 146.91)
-t.seth(264.32)
-t.circle(136.7, 40.19)
-t.seth(304.5)
-t.circle(375.86, 27.64)
-t.seth(27.86)
-t.circle(375.86, 27.64)
-t.seth(55.5)
-t.circle(136.7, 40.19)
-t.seth(95.68)
-t.circle(83.63, 146.91)
-t.end_fill()
-
-t.fillcolor("White")
-go(107.36, 31.22)
-t.begin_fill()
-t.seth(219.38)
-t.circle(14.02, 145.79)
-t.seth(204.18)
-t.circle(15.73, 180)
-t.seth(219.74)
-t.circle(13.97, 97.23)
-t.seth(316.97)
-t.circle(19.78, 127.65)
-t.seth(84.62)
-t.circle(67.5, 63.06)
-t.seth(147.68)
-t.circle(20.97, 71.69)
-t.end_fill()
-
-go(-107.36, 31.22)
-t.begin_fill()
-t.seth(320.62)
-t.circle(-14.02, 145.79)
-t.seth(335.82)
-t.circle(-15.73, 180)
-t.seth(320.26)
-t.circle(-13.97, 97.23)
-t.seth(223.03)
-t.circle(-19.78, 127.65)
-t.seth(95.38)
-t.circle(-67.5, 63.06)
-t.seth(32.32)
-t.circle(-20.97, 71.69)
-t.end_fill()
-
-t.color("White")
-go(120, -130)
-t.write("Te Amo", False, "right", \
-        ("Bradley Hand ITC", 55, "bold"))
-
-t.hideturtle()
-turtle.done()
+    
